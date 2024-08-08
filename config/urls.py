@@ -5,7 +5,7 @@ from django.urls import path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from habit.views import home
+from habit.views import home, run_tests
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -25,6 +25,7 @@ urlpatterns = [
     path('', home, name='home'),
     path("users/", include("users.urls", namespace="users")),
     path("habit/", include("habit.urls", namespace="habit")),
+    path('run-tests/', run_tests, name='run-tests'),
 
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),

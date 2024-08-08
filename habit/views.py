@@ -7,6 +7,11 @@ from habit.serializers import HabitSerializer
 from habit.services import create_periodic_task, disable_periodic_task
 from django.shortcuts import render
 
+import os
+import subprocess
+from django.http import HttpResponse
+from django.conf import settings
+
 
 class HabitsCreateAPIView(generics.CreateAPIView):
     """
@@ -285,3 +290,24 @@ def home(request):
     Главная страница проекта.
     """
     return render(request, 'habit/home.html')
+
+
+def run_tests(request):
+    # Путь к manage.py
+    manage_py = os.path.join(settings.BASE_DIR, 'manage.py')
+
+    # Запуск тестов для приложения users
+    result_users = subprocess.run([settings.PYTHON_BIN, manage_py, 'test', 'users'], stdout=subprocess.PIPE,
+                                  stderr=subprocess.PIPE)
+    output_users = result_users.stdout.decode('utf-8') + result_users.stderr.decode('utf-8')
+
+    # Запуск тестов для приложения habit
+    result_habit = subprocess.run([settings.PYTHON_BIN, manage_py, 'test', 'habit'], stdout=subprocess.PIPE,
+                                  stderr=subprocess.PIPE)
+    output_habit = result_habit.stdout.decode('utf-8') + result_habit.stderr.decode('utf-8')
+
+    # Объединение результатов
+    full_output = f"Users Tests:\n{output_users}\n\nHabit Tests:\n{output_habit}"
+
+    # Вывод результатов в HTTP-ответе
+    return HttpResponse(f"<pre>{full_output}</pre>")
