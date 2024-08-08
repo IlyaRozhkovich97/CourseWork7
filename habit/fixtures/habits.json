@@ -1,0 +1,102 @@
+[
+{
+    "model": "habit.habits",
+    "pk": 8,
+    "fields": {
+        "owner": 4,
+        "place": "Стол новый",
+        "time": "14:21:25",
+        "action": "Пить воду",
+        "is_nice": false,
+        "related": null,
+        "periodicity": 1,
+        "prize": "Кофе",
+        "duration": 2,
+        "is_public": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false,
+        "created_at": "2024-08-07T10:47:21.319Z",
+        "updated_at": "2024-08-07T11:21:28.937Z"
+    }
+},
+{
+    "model": "habit.habits",
+    "pk": 9,
+    "fields": {
+        "owner": 1,
+        "place": "Спортзал",
+        "time": "15:35:35",
+        "action": "Упражнения на растяжку",
+        "is_nice": true,
+        "related": null,
+        "periodicity": 1,
+        "prize": null,
+        "duration": 120,
+        "is_public": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false,
+        "created_at": "2024-08-07T12:09:39.523Z",
+        "updated_at": "2024-08-07T12:35:38.102Z"
+    }
+},
+{
+    "model": "habit.habits",
+    "pk": 10,
+    "fields": {
+        "owner": null,
+        "place": "Спортзал",
+        "time": "07:30:00",
+        "action": "Упражнения на растяжку",
+        "is_nice": true,
+        "related": null,
+        "periodicity": 1,
+        "prize": null,
+        "duration": 120,
+        "is_public": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false,
+        "created_at": "2024-08-07T12:29:27.326Z",
+        "updated_at": "2024-08-07T12:29:27.326Z"
+    }
+},
+{
+    "model": "habit.habits",
+    "pk": 11,
+    "fields": {
+        "owner": 1,
+        "place": "Спортзал",
+        "time": "07:30:00",
+        "action": "Упражнения на растяжку",
+        "is_nice": true,
+        "related": null,
+        "periodicity": 1,
+        "prize": null,
+        "duration": 120,
+        "is_public": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": false,
+        "sunday": false,
+        "created_at": "2024-08-07T12:36:25.338Z",
+        "updated_at": "2024-08-07T12:36:25.441Z"
+    }
+}
+]

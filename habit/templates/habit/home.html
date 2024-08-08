@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <meta name="description" content="Проект по управлению привычками с удобными моделями, API и интеграцией с Telegram.">
+    <meta name="author" content="Илья Рожкович">
+    <meta name="keywords" content="привычки, API, Telegram, управление привычками">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Добро пожаловать в проект по управлению привычками!</h1>
+            <p>Эффективное управление привычками помогает достигать целей и улучшать качество жизни.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h2>Описание задач</h2>
+                <p>Этот проект включает в себя создание и управление привычками с учетом различных аспектов, таких как:</p>
+                <ul>
+                    <li>Модели привычек: определение действия, времени, места и других параметров.</li>
+                    <li>Эндпоинты для работы с фронтендом, включая регистрацию, авторизацию и управление привычками.</li>
+                    <li>Интеграция с Telegram для рассылки уведомлений о привычках.</li>
+                    <li>Пагинация и права доступа для удобного управления и просмотра данных.</li>
+                    <li>Документация API для фронтенд-разработчиков.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="documentation">
+            <div class="container">
+                <h2>Документация API</h2>
+                <p>Вы можете ознакомиться с документацией нашего API по следующей ссылке:</p>
+                <a href="http://localhost:8000/swagger/" target="_blank" class="doc-link">Перейти к документации</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-card">
+                    <h3>Удобные модели привычек</h3>
+                    <p>Определите привычки с учетом всех необходимых параметров и требований.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Эндпоинты API</h3>
+                    <p>Удобное взаимодействие с фронтендом через REST API.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Интеграция с Telegram</h3>
+                    <p>Автоматические уведомления о выполнении привычек через Telegram.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Илья Рожкович. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>

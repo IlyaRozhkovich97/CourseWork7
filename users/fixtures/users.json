@@ -1,0 +1,48 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$sfjJg1xDtnRcHdmwNp4k6q$2eZ5HvkH0hlbRTvjUolJoPSl9IW4IjZX/eE+ZxLFIZk=",
+    "last_login": "2024-08-01T10:19:28Z",
+    "is_superuser": true,
+    "first_name": "Илья",
+    "last_name": "Рожкович",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-07-31T15:49:29Z",
+    "email": "solod-spb78@yandex.ru",
+    "phone": "+79523512309",
+    "city": "Санкт-Петербург",
+    "avatar": "users/avatars/IMG_3603.jpeg",
+    "telegram_chat_id": "273440767",
+    "country": "Россия",
+    "nickname": "Admin",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$gtjicuzVUmCSLCScvKoghJ$whHgC+zoGbqyNUf87ryOdUy7GC9OrqhghnK4h1rSZzw=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-08T16:30:53.657Z",
+    "email": "rozhkovich.ilya@mail.ru",
+    "phone": null,
+    "city": null,
+    "avatar": "",
+    "telegram_chat_id": null,
+    "country": null,
+    "nickname": null,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
