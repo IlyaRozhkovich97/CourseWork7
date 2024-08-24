@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 from datetime import timedelta
+import sys
 
 load_dotenv()
 
@@ -29,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False) == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'web']
 
 # Application definition
 
@@ -86,11 +87,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('NAME'),
-        'USER': 'postgres',
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT')
+        'NAME': os.getenv('POSTGRES_NAME'),
+        'USER': "postgres",
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': os.getenv('POSTGRES_HOST'),
+        'PORT': os.getenv('POSTGRES_PORT')
     }
 }
 
@@ -183,6 +184,4 @@ TELEGRAM_URL = "https://api.telegram.org/bot"
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
-
-import sys
 PYTHON_BIN = sys.executable
